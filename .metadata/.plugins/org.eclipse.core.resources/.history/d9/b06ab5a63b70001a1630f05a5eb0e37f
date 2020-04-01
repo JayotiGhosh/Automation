@@ -1,0 +1,21 @@
+package browser;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class Native {
+
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO Auto-generated method stub
+		DesiredCapabilities cap = new DesiredCapabilities();
+		cap.setCapability("deviceName", "samsung");
+		cap.setCapability("platformName", "android");
+		cap.setCapability("app", "/Users/jayot/Downloads/Khan Academy_v6.3.0_apkpure.com.apk");
+		AndroidDriver Driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+	}
+
+}
